@@ -1,0 +1,58 @@
+<%- include('./layouts/header'); -%>
+<nav class="navbar navbar-expand-lg px-5 py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Magang.co.id</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page" href="#">Jobseeker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="#">Employer</a>
+          </li>
+        </ul>
+        <form class="d-flex gap-3" role="search">
+          <button class="btn btn-outline-primary" type="submit">Sign-up</button>
+          <button class="btn btn-primary" type="submit">Sign-In</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="px-5">
+    <section>
+        <div class="input-group input-group-lg mt-5 mb-3">
+            <input type="text" class="form-control" placeholder="Search for a job post, company, location..." aria-label="Job Title" aria-describedby="basic-addon1">
+            <button class="btn btn-outline-primary" type="button" id="button-addon2">Cari</button>
+        </div>
+        <div class="input-group mb-5 gap-3 w-50">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Location</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Job Type</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+        </div>
+    </section>
+    <section id="job-list">
+        <div class="row">
+            <div class="jobs col d-flex flex-column gap-3">
+                <!-- JOB -->
+            </div>
+            <div class="jobs-info col">
+                <!-- JOB INFO -->
+            </div>
+        </div>
+    </section>
+  </main>
+<%- include('./layouts/footer'); -%>
+<script src="/js/jobBoard.js"></script>

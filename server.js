@@ -4,9 +4,10 @@ const morgan = require("morgan");
 const path = require("path");
 const app = express();
 
-app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
@@ -15,11 +16,13 @@ app.set("views", path.join(__dirname, "views"));
 
 const db = require("./src/models");
 const viewRouter = require("./src/routers/viewRouter");
-const indexRouter = require("./src/routers/indexRouter");
+const hiringRouter = require("./src/routers/hiringRouter");
+const companyRouter = require("./src/routers/companyRouter");
 
 const VERSION_API = "v1";
 app.use("/", viewRouter);
-app.use(`/api/${VERSION_API}`, indexRouter);
+app.use(`/api/hiring`, hiringRouter);
+app.use(`/api/companys`, companyRouter);
 
 let PORT = process.env.PORT || 3000;
 db.sequelize.sync({ alter: true }).then(() => {

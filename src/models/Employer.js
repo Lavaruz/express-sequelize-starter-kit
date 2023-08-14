@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define(
-    "User",
+  const Employers = sequelize.define(
+    "Employer",
     {
       id: {
         type: DataTypes.UUID,
@@ -9,11 +9,14 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         unique: true,
       },
-      username: DataTypes.STRING,
+      fullname: DataTypes.STRING,
+      work_email: DataTypes.STRING,
+      position: DataTypes.STRING,
+      phone: DataTypes.STRING,
     },
     {
       timestamps: false,
     }
   );
-  return User;
+  return Employers;
 };

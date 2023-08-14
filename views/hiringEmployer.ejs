@@ -1,0 +1,143 @@
+<%- include('./layouts/header'); -%>
+<nav class="navbar navbar-expand-lg px-5 py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Magang.co.id</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold"href="/">Jobseeker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page"  href="/employer">Employer</a>
+          </li>
+        </ul>
+        <div class="d-flex gap-3" role="search">
+          <button class="btn btn-outline-primary" type="button">Sign-in</button>
+          <a href="/employer/hiring"><button class="btn btn-primary hiring" type="button">Start Hiring</button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="px-5 py-5">
+    <section id="hiring" class="">
+        <form id="hiring-form"">
+            <div class="hiring-head text-center">
+                <h1 style="font-size: 3rem;" class="fw-bold">Hi Recruiter!.</h1>
+                <h5 class="text-secondary">Here are the next steps:</h5>
+            </div>
+            <div class="hiring-basic my-5">
+                <h4 class="mb-4 fw-bold">Basic Information</h4>
+                <div class="hiring-basic-form">
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Fullname<span style="color: #ff4c4c"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="fullname">
+                    </div>
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Work Email<span style="color: #ff4c4c"> *</span></label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="work_email">
+                    </div>
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Your Position<span style="color: #ff4c4c"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="position">
+                    </div>
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Phone<span style="color: #ff4c4c"> *</span></label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number" name="phone">
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-basic my-5">
+                <h4 class="mb-4 fw-bold">Company Information</h4>
+                <div class="hiring-basic-form">
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Company Name<span style="color: #ff4c4c"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="company_name">
+                    </div>
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Location<span style="color: #ff4c4c"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="company_location">
+                    </div>
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Company Size<span style="color: #ff4c4c"> *</span></label>
+                        <select class="form-select" aria-label="Default select example" name="company_size">
+                            <option value="1-250 Employees">1-250 Employees</option>
+                            <option value="250+ Employees">250+ Employees</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-basic my-5">
+                <h4 class="mb-4 fw-bold">Job Basics</h4>
+                <div class="">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Job Title<span style="color: #ff4c4c"> *</span></label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="job_title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Hiring Timeline For This Job<span style="color: #ff4c4c"> *</span></label>
+                        <select class="form-select" aria-label="Default select example" name="job_timeline">
+                            <option value="3 Days">3 Days</option>
+                            <option value="7 Days">7 Days</option>
+                            <option value="2 Weeks">2 Weeks</option>
+                            <option value="4 Weeks">4 Weeks</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Salary</label>
+                        <div class="hiring-pay d-flex gap-3 align-items-center">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">IDR</span>
+                                <input type="number" class="form-control" aria-label="Username" placeholder="Minimum" aria-describedby="basic-addon1" name="min_salary">
+                            </div>
+                            <p style="margin: 0;">To</p>
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">IDR</span>
+                                <input type="number" class="form-control" aria-label="Username" placeholder="Maximum" aria-describedby="basic-addon1" name="max_salary">
+                            </div>
+                            <select class="form-select w-50" aria-label="Default select example" name="periode_salary">
+                                <option value="Per Month">Per Month</option>
+                                <option value="Per Day">Per Day</option>
+                                <option value="Per Hour">Per Hour</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Job Description<span style="color: #ff4c4c"> *</span></label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="job_description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-basic my-5">
+                <h4 class="mb-4 fw-bold">Communication Preferences</h4>
+                <div class="hiring-notification">
+                    <div class="">
+                        <label for="exampleFormControlInput1" class="form-label">Send notification to<span style="color: #ff4c4c"> *</span></label>
+                        <input type="email" class="form-control w-50" id="exampleFormControlInput1" placeholder="name@example.com" name="email_notification">
+                    </div>
+                </div>
+            </div>
+            <div class="hiring-button d-flex justify-content-between">
+                <a href="/employer"><button class="btn btn-outline-primary hiring"><i class="uil uil-backward"></i> Back</button></a>
+                <div class="preview">
+                    <button class="btn me-4" type="button">Preview <i class="uil uil-eye"></i></button>
+                    <button class="btn btn-primary hiring" type="submit">Confirm <i class="uil uil-forward"></i></button>
+                </div>
+            </div>
+        </form>
+    </section>
+  </main>
+
+<%- include('./layouts/footer'); -%>
+<script src="/js/hiringEmployer.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2({
+            minimumResultsForSearch: -1,
+            placeholder: 'How many employees do you have?'
+        });
+    });
+  </script>

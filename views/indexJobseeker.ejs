@@ -1,0 +1,41 @@
+<%- include('./layouts/header'); -%>
+<nav class="navbar fixed-top navbar-expand-lg px-5 py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Magang.co.id</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page" href="/">Jobseeker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/employer">Employer</a>
+          </li>
+        </ul>
+        <form class="d-flex gap-3" role="search">
+          <button class="btn btn-outline-primary" type="submit" disabled>Sign-up</button>
+          <button class="btn btn-primary" type="submit" disabled>Sign-In</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="px-5">
+    <section id="main-hero" class="row align-items-center">
+        <div class="container-fluid col">
+            <h1>Temukan Tempat Magang <br>Impian Anda</h1>
+            <h5 class="text-secondary">menyediakan akses mudah ke berbagai perusahaan-perusahaan ternama di berbagai industri.</h5>
+            <div class="input-group mt-5">
+                <span class="input-group-text pe-4 text-secondary" id="basic-addon1">Job Title</span>
+                <input type="text" class="form-control" placeholder="Search for a job title" aria-label="Job Title" aria-describedby="basic-addon1">
+                <a href="/jobseeker/job-board"><button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="uil uil-search"></i></button></a>
+            </div>
+        </div>
+        <div class="col">
+            <img src="/img/work.png" alt="" class="w-100">
+        </div>
+    </section>
+  </main>
+<%- include('./layouts/footer'); -%>

@@ -1,3 +1,67 @@
-/* body {
-  background-color: aqua;
-} */
+body{
+  background-color: aliceblue;
+}
+nav{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+nav .container-fluid{
+  margin: 0 5rem;
+}
+main{
+  margin: 0 5rem;
+}
+#main-hero{
+  height: 110vh;
+}
+#job-list{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2rem;
+}
+.job{
+  border: .2px solid lightgray;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+}
+.job ul li{
+  list-style-type: none;
+}
+.job-info{
+  border: .2px solid lightgray;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  padding: 2rem 1rem;
+}
+.job-desc{
+  height: 50vh;
+}
+.dropdown-menu li{
+  width: 100%;
+}
+.js-example-basic-single{
+  width: 100%;
+}
+.hiring a{
+  text-decoration: none;
+  color: white;
+  margin: 0;
+}
+#hiring{
+  background-color: white;
+  border-radius: 30px;
+  padding: 3rem 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.hiring-basic-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.hiring-button{
+  margin-top: 5rem;
+}

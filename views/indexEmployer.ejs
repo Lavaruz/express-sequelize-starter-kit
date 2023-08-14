@@ -1,0 +1,52 @@
+<%- include('./layouts/header'); -%>
+<nav class="navbar fixed-top navbar-expand-lg px-5 py-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Magang.co.id</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold"href="/">Jobseeker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" aria-current="page"  href="/employer">Employer</a>
+          </li>
+        </ul>
+        <div class="d-flex gap-3" role="search">
+          <button class="btn btn-outline-primary" type="submit" disabled>Sign-in</button>
+          <a href="/employer/hiring"><button class="btn btn-primary hiring" type="submit">Start Hiring</button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="px-5">
+    <section id="main-hero" class="row align-items-center">
+        <div class="container-fluid col">
+            <h1 style="font-size: 3rem;" class="fw-bold">Hire the best <br>candidates.</h1>
+            <h5 class="text-secondary">Let us solve all your recruitment needs.</h5>
+            <select class="js-example-basic-single" name="state">
+                <option value=""></option>
+                <option value="1-250 Employees">1-250 Employees</option>
+                <option value="250+ Employees">250+ Employees</option>
+            </select>
+            <br>
+            <a href="/employer/hiring"><button class="btn btn-primary hiring mt-4" type="submit">Start Hiring</button></a>
+        </div>
+        <div class="col">
+            <img src="/img/employees.png" alt="" class="w-100">
+        </div>
+    </section>
+  </main>
+
+<%- include('./layouts/footer'); -%>
+  <script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2({
+            minimumResultsForSearch: -1,
+            placeholder: 'How many employees do you have?'
+        });
+    });
+  </script>
